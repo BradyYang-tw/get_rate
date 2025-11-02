@@ -24,7 +24,7 @@ def get_rate_from_aia(year='2025', month='9'):
         # print(page)
         payload = {
             'product_code':'',
-            'year':year,
+            'year':f"{int(year)+1911}",
             'month':month,
             'pageindex':page
         }
@@ -459,7 +459,11 @@ def get_rates_and_update_excel(df, year='114', month='9'):
         
 
 if __name__ == "__main__":
-    get_all_rates()
+    now = datetime.now()
+    year = now.year - 1911
+    month = now.month
+    print(year, month)
+    # get_all_rates()
     # df = pd.read_excel('./商品名稱.xlsx')
     # get_rates_and_update_excel(df)
     
