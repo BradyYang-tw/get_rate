@@ -1,0 +1,7 @@
+pandas
+bs4
+openpyxl
+requests[security]
+fastapi 
+uvicorn
+python-multipart
